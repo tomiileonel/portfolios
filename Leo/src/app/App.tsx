@@ -140,7 +140,7 @@ const T = {
           role: "Técnico en Informática",
           company: "EPET 34",
           period: "2020 — 2025",
-          type: "work",
+          type: "education",
           description: "Formación técnica de 6 años que me otorgó el título de Técnico en Informática. Adquirí bases sólidas en programación, redes, sistemas operativos y soporte técnico tanto en entornos profesionales como personales.",
           achievements: [
             "Titulado como Técnico en Informática tras 6 años de formación intensiva",
@@ -323,7 +323,7 @@ const T = {
           role: "IT Technician",
           company: "EPET 34",
           period: "2020 — 2025",
-          type: "work",
+          type: "education",
           description: "6-year technical education that earned me the title of IT Technician. Built a solid foundation in programming, networking, operating systems, and technical support in both professional and personal environments.",
           achievements: [
             "Graduated as IT Technician after 6 years of intensive training",
@@ -504,7 +504,7 @@ const T = {
           role: "Técnico em Informática",
           company: "EPET 34",
           period: "2020 — 2025",
-          type: "work",
+          type: "education",
           description: "Formação técnica de 6 anos que me conferiu o título de Técnico em Informática. Adquiri bases sólidas em programação, redes, sistemas operacionais e suporte técnico em ambientes profissionais e pessoais.",
           achievements: [
             "Formado como Técnico em Informática após 6 anos de formação intensiva",
@@ -583,6 +583,13 @@ const projectTags = [
 ];
 
 const projectFeatured = [true, true, false, false];
+
+const projectLinks = [
+  { demo: "#", code: "#" }, // MediAbsence
+  { demo: "#", code: "https://github.com/tomiileonel/checkcar.git" }, // CheckCar MH
+  { demo: "#", code: "#" }, // Portfolios
+  { demo: "#", code: "#" }, // Proximo
+];
 
 const skillCategories = (catTitles: readonly string[]) => [
   {
@@ -1005,7 +1012,7 @@ function Projects({ lang }: { lang: Lang }) {
   };
 
   const filtered = t.items
-    .map((item, i) => ({ ...item, image: projectImages[i], tags: projectTags[i], featured: projectFeatured[i] }))
+    .map((item, i) => ({ ...item, image: projectImages[i], tags: projectTags[i], featured: projectFeatured[i], links: projectLinks[i] }))
     .filter((p) => filter === "all" || p.category === filter);
 
   return (
@@ -1063,10 +1070,10 @@ function Projects({ lang }: { lang: Lang }) {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a href="#" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#8b1a2f] to-[#c9a84c] text-white text-sm hover:opacity-90 transition-opacity" style={{ fontWeight: 500 }}>
+                  <a href={project.links.demo} target={project.links.demo !== "#" ? "_blank" : undefined} rel={project.links.demo !== "#" ? "noopener noreferrer" : undefined} className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#8b1a2f] to-[#c9a84c] text-white text-sm hover:opacity-90 transition-opacity" style={{ fontWeight: 500 }}>
                     <ExternalLink size={14} /> {t.demoBtn}
                   </a>
-                  <a href="#" className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 text-[#8a8a9a] text-sm hover:border-[#c9a84c]/30 hover:text-[#c9a84c] transition-all">
+                  <a href={project.links.code} target={project.links.code !== "#" ? "_blank" : undefined} rel={project.links.code !== "#" ? "noopener noreferrer" : undefined} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 text-[#8a8a9a] text-sm hover:border-[#c9a84c]/30 hover:text-[#c9a84c] transition-all">
                     <Github size={14} /> {t.codeBtn}
                   </a>
                 </div>
