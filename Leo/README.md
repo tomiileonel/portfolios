@@ -54,3 +54,13 @@ Si queres correr este proyecto de manera local para explorar la arquitectura y e
    ```bash
    npm run dev
    ```
+
+---
+
+## 📬 Contacto
+
+Si estás buscando un desarrollador para construir productos digitales escalables y con un diseño de alto nivel, no dudes en contactarme:
+
+* **Ubicación:** Posadas, Misiones, Argentina
+* **LinkedIn:** [Tu Enlace a LinkedIn]
+* **Email:** tomasleonelramon@gmail.com
