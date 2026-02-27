@@ -585,7 +585,7 @@ const projectTags = [
 const projectFeatured = [true, true, false, false];
 
 const projectLinks = [
-  { demo: "#", code: "#" }, // MediAbsence
+  { demo: "#", code: "https://github.com/tomiileonel/MediAbsence.git" }, // MediAbsence
   { demo: "#", code: "https://github.com/tomiileonel/checkcar.git" }, // CheckCar MH
   { demo: "#", code: "#" }, // Portfolios
   { demo: "#", code: "#" }, // Proximo
